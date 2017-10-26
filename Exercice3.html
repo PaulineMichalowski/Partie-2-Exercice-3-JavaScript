@@ -5,14 +5,14 @@
   <title>Exercice 3</title>
 </head>
 <body>
-  <form method="post">
-    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom" />
+  <form>
+    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom" onkeyup="affichage();" />
   </form>
-  <script type="text/javascript">
-  document.onkeypress=function(evt){
-    document.getElementById('nom').value=evt.key;
-    alert('Vous avez appuyé sur la touche ' + evt.key);
-  }
+  <script>
+  	function affichage(){
+  		var lettre = document.getElementById("nom").value;
+  		alert(lettre);
+  	}
   </script>
 </body>
 </html>
